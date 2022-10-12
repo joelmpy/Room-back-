@@ -12,7 +12,6 @@ const routeur = require('./route/route')
 const passport = require('./config/passport')
 
 
-
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cors())
@@ -23,8 +22,8 @@ app.get('/room', (req, res) => {
 })
 
 app.listen(PORT, err => {
-    if(err){
+    if (err) {
         return console.log('ERROR', err)
     }
-        console.log(`Listen my port ${PORT}`)
+    console.log(`Listen my port ${PORT}`)
 })

@@ -34,15 +34,15 @@ passport.use(
                     return done(null, false, { message: "Utilsateur non trouvé" })
                 }
                 // je verife si le mots de passe est bon ou pas
-                const validate = await user.isValidPassword( password )
-                if(!validate){
-                    return done(null, false, {message: 'Error de connexion'})
+                const validate = await user.isValidPassword(password)
+                if (!validate) {
+                    return done(null, false, { message: 'Error de connexion' })
                 }
 
                 // je return si tout est bon l'user avce la conexion reussi 
                 return done(null, user, { message: 'Connexion reussi' })
 
-            } 
+            }
             catch (error) {
                 return done(error)
             }
